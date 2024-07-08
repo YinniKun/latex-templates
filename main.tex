@@ -5,17 +5,35 @@
 \usepackage{lab_theme}
 \usepackage{graphicx}
 
-\title{test}
-\author{test}
+\title{title}
+\author{author}
 \date{\today}
+\institute{affiliation}
+\subtitle{subtitle}
 
 \begin{document}
-\settitlepage{blc_1_2-1-1.jpg}
-\frame{\titlepage}
+
+%title page
+\settitlepage{example-image-a}{example-image-a}{example-image-a}{example-image-a}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% main pages
+\setfooter{example-image-a}{Short title}
+\begin{frame}
+\frametitle{Test page 1}
+
+hi
+
+
+\end{frame}
+
 \begin{frame}
     
-\frametitle{Test}
-
+\frametitle{Test page 2}
+    
 \end{frame}
 
 \end{document}
