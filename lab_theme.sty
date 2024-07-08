@@ -1,0 +1,33 @@
+% presentation format for the lab
+\ProvidesPackage{lab_theme}
+\RequirePackage{tikz}
+
+\usepackage{graphicx}
+
+%colour is uoft blue (#1E3765)
+\definecolor{uoftblue}{RGB}{30,55,101}
+
+%title page settings
+% title graphic in the background
+\newcommand{\settitlepage}[1]{
+    \setbeamertemplate{title page}{
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[inner sep=0pt, opacity=0.3] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{#1}};
+        \end{tikzpicture}
+    }
+}
+
+% add three logos over the bottom bar
+% one left, one centre, one right
+\newcommand{\setlogos}[3]{
+    \setbeamertemplate{footline}{
+        \begin{tikzpicture}[remember picture,overlay]
+            \fill[uoftblue] (current page.south west) rectangle ([yshift=1.25cm]current page.south east); 
+            \node[anchor=south west, inner sep=0pt, xshift=0.2cm] at ([yshift=0.25cm]current page.south west) {\includegraphics[width=2.75cm]{#1}};
+            \node[anchor=south, inner sep=0pt] at ([yshift=0.25cm]current page.south) {\includegraphics[width=2.5cm]{#2}};
+            \node[anchor=south east, inner sep=0pt, xshift=-0.2cm] at ([yshift=0.2cm]current page.south east) {\includegraphics[width=2cm]{#3}};
+        \end{tikzpicture}
+    }
+}
+
+
