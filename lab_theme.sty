@@ -62,7 +62,7 @@
             \fill[uoftblue] (current page.south west) rectangle ([yshift=1.25cm]current page.south east); 
             \node[anchor=south west, inner sep=0pt, xshift=0.2cm] at ([yshift=0.25cm]current page.south west) {\includegraphics[width=2.75cm]{#1}};
             \node[anchor=south, inner sep=0pt, text=white, font=\small] at ([yshift=0.45cm]current page.south) {#2};
-            \node[anchor=south east, inner sep=0pt, text=white, font=\small] at ([yshift=0.35cm]current page.south east) {\insertframenumber/\inserttotalframenumber};
+            \node[anchor=south east, inner sep=0pt, text=white, xshift=-0.5cm, font=\small] at ([yshift=0.35cm]current page.south east) {\insertframenumber/\inserttotalframenumber};
         \end{tikzpicture}
     }
 }
