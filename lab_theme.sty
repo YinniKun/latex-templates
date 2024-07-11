@@ -5,9 +5,23 @@
 \usepackage{tikz}
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
+\usepackage[]{biblatex}
 
+%settings
 %colour is uoft blue (#1E3765)
 \definecolor{uoftblue}{RGB}{30,55,101}
+
+% Define a new citation command
+\newcommand{\incite}[1]{%
+  \citeauthor{#1}, \citeyear{#1}, \citejournal{#1}%
+}
+
+% Define a new citejournal command to extract the journal title
+\DeclareCiteCommand{\citejournal}
+  {}
+  {\printfield[journaltitle]{journaltitle}}
+  {}
+  {}
 
 %title page settings
 

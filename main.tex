@@ -4,6 +4,7 @@
 
 \usepackage{lab_theme}
 \usepackage{graphicx}
+\addbibresource{test.bib}
 
 \title{title}
 \author{author}
@@ -20,18 +21,38 @@
     \titlepage
 \end{frame}
 
+% table of contents
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
 % main pages
 \setfooter{example-image-a}{Short title}
+
+\begin{frame}
+\frametitle{Test page 0}
+\end{frame}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{TOC}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+\section{Introduction}
+
 \begin{frame}
 \frametitle{Test page 1}
 
 hi \pause 
 
-meme
-
+meme (\incite{b})
 
 \end{frame}
 
+\section{Methods}
 \begin{frame}
     
 \frametitle{Test page 2}
